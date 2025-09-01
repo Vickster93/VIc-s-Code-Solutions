@@ -1,0 +1,29 @@
+<section class="flex flex-col items-center min-h-screen px-4 py-12 bg-transparent">
+  <h2 class="text-3xl font-bold mb-6 text-white text-center">Contact Us</h2>
+
+  <form 
+    action="https://api.web3forms.com/submit" 
+    method="POST" 
+    class="grid gap-4 max-w-md w-full"
+    target="_self"  <!-- ensures redirect happens in same window -->
+  >
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="69dbe54e-fa7b-46a0-bfcd-726f978f14db">
+
+    <!-- Redirect to your thank-you page -->
+    <input type="hidden" name="redirect" value="thank-you.html">
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+    <!-- Form Inputs with proper name attributes -->
+    <input type="text" name="name" placeholder="Your Name" class="p-2 border rounded w-full" required>
+    <input type="email" name="email" placeholder="Your Email" class="p-2 border rounded w-full" required>
+    <textarea name="message" placeholder="Your Message" class="p-2 border rounded w-full" rows="4" required></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+      Send
+    </button>
+  </form>
+</section>
